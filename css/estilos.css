@@ -1,0 +1,76 @@
+body {
+    background-color: #dfe0df; 
+    font-family: 'Arial', sans-serif; 
+    height: 100vh;
+    margin: 0; 
+    display: flex;
+    flex-direction: column; /* Cambia a columna para que header y container estén uno debajo del otro */
+}
+
+header {
+    display: flex;
+    align-items: center; /* Centra verticalmente el logo */
+    height: 70px; /* Altura del header */
+    background-color: #5184DC; /* Color de fondo del header */
+    padding: 0 20px; /* Espaciado en los lados */
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    height: 50px; /* Ajusta la altura del logo */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    padding: 40px; 
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px; 
+    margin: 0; 
+    margin-bottom: 20px; 
+}
+
+.button-container {
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: end;
+}
+
+button {
+    padding: 10px 25px; 
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 12px; 
+    margin-top: 20px; 
+}
+
+.qr {
+    margin-top: 20px;
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 300px; 
+    height: 300px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border: solid 10px block;
+}
