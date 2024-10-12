@@ -1,0 +1,46 @@
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px auto; /* Centrado automático */
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: white;
+    width: 33.33%; /* Ancho fijo para que todos sean del mismo tamaño */
+}
+th {
+    background-color: black;
+}
+h2 {
+    text-align: center;
+}
+.container {
+    margin: 0; 
+}
+
+body {
+    background-color: #dfe0df; 
+    font-family: 'Arial', sans-serif; 
+    height: 100vh;
+    margin: 0; 
+    display: flex;
+    flex-direction: column; /* Cambia a columna para que header y container estén uno debajo del otro */
+}
+
+header {
+    display: flex;
+    align-items: center; /* Centra verticalmente el logo */
+    height: 70px; /* Altura del header */
+    background-color: #5184DC; /* Color de fondo del header */
+    padding: 0 20px; /* Espaciado en los lados */
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    height: 50px; /* Ajusta la altura del logo */
+}

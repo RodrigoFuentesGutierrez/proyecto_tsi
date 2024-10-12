@@ -1,0 +1,50 @@
+header {
+    display: flex;
+    align-items: center; 
+    height: 70px; 
+    background-color: #5184DC; 
+    padding: 0 20px; 
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    height: 50px; 
+}
+.opciones a {
+    font-size: 18px; 
+    color: white; 
+    margin: 10px;
+    text-decoration: none;
+}
+.opciones {
+    margin-left: auto; 
+}
+.container{
+    margin-left: 70px;
+}
+h1 {
+    font-size: 30px; 
+    color: #333;
+}
+
+p {
+    font-size: 22px; 
+    color: #666;
+    margin-left: -35px;
+   
+}
+.btn{
+    margin-top: 460px;
+    margin-left: 1285px;
+   
+}
+button{
+    padding: 25px 25px;
+    color: white;
+    font-size: 18px;
+    background-color: #5184DC;
+    border: none;
+}

@@ -1,0 +1,38 @@
+header {
+    display: flex;
+    height: 70px;
+    background-color: #5184DC;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    height: 70px
+}
+
+body {
+    padding: 50px;
+    font-family: sans-serif;
+    text-align: center;
+    -webkit-text-fill-color: white;
+    max-height: 160ch;
+    background-color: #DFE0FF;
+}
+
+button {
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 0px;
+    border-color: #5184DC;
+    -webkit-text-fill-color: black;
+}
+
+#mensaje {
+    max-width: 40ch;
+    background-color: #5184DC;
+    padding: 40px 25px;
+    top: 200px;
+    border-color: #5184DC;
+}
