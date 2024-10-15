@@ -1,15 +1,28 @@
+<?php
+// Incluir el archivo de conexión
+include 'conexionBD.php';
+
+// Consulta para obtener los datos
+$sql = "SELECT fecha, SUM(asistencia) AS total_asistencia FROM asistencia GROUP BY fecha";
+$result = $conn->query($sql);
+
+// Crear la tabla HTML
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla de Asistencia</title>
+    <title>Asistencia</title>
     <link rel="stylesheet" href="../css/tabla.css">
 </head>
 <body>
-    <header>
+<header>
         <div class="logo">
             <img src="../img/logo.png" alt="Logo"> 
+        </div>
+        <div class="opciones">
+           <a href="">cerrar sesion</a>
         </div>
     </header>
 <h2>Registro de Asistencia</h2>
@@ -19,87 +32,27 @@
             <tr>
                 <th>Asistencia</th>
                 <th>Fecha</th>
-                <th>Hora</th>
             </tr>
         </thead>
-        <tbody>
-            <td>
-                1
-            </td>
-            <td>
-                14/10/2024
-            </td>
-            <td>
-                10:40:30
-            </td>
-        </tbody>
-        <tbody>
-            <td>
-                2
-            </td>
-            <td>
-                12/11/2024
-            </td>
-            <td>
-                12:04:53
-            </td>
-        </tbody>
-        <tbody>
-            <td>
-                3
-            </td>
-            <td>
-                24/11/2024
-            </td>
-            <td>
-                09:34:21
-            </td>
-        </tbody>
-        <tbody>
-            <td>
-                4
-            </td>
-            <td>
-                06/12/2024
-            </td>
-            <td>
-                09:52:12
-            </td>
-        </tbody>
-        <tbody>
-            <td>
-                5
-            </td>
-            <td>
-                10/12/2024
-            </td>
-            <td>
-                13:52:12
-            </td>
-        </tbody>
-        <tbody>
-            <td>
-                6
-            </td>
-            <td>
-                20/12/2024
-            </td>
-            <td>
-                15:52:24
-            </td>
-        </tbody>
-        <tbody>
-            <td>
-                7
-            </td>
-            <td>
-                30/12/2024
-            </td>
-            <td>
-                11:42:52
-            </td>
-        </tbody>
+        <tbody> <!-- Abrir tbody -->
+        <?php
+        // Mostrar los datos
+        if ($result) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>
+                        <td>" . $row['total_asistencia'] . "</td>
+                        <td>" . $row['fecha'] . "</td>
+                      </tr>";
+            }
+        } else {
+            echo "<tr><td colspan='3'>No se encontraron resultados.</td></tr>";
+        }
+        ?>
+        </tbody> <!-- Cerrar tbody -->
     </table>
 </div>
 </body>
 </html>
+<?php
+// Cerrar la conexión$conn->close();
+?>
