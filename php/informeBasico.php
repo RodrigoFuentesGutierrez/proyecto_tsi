@@ -3,7 +3,7 @@
 include 'conexionBD.php';
 
 // Consulta para obtener los datos
-$sql = "SELECT id_asistencia, fecha, hora FROM asistencia";
+$sql = "SELECT asistencia, fecha, hora FROM asistencia";
 $result = $conn->query($sql);
 
 // Crear la tabla HTML
@@ -17,6 +17,14 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="../css/tabla.css">
 </head>
 <body>
+<header>
+        <div class="logo">
+            <img src="../img/logo.png" alt="Logo"> 
+        </div>
+        <div class="opciones">
+           <a href="">cerrar sesion</a>
+        </div>
+    </header>
 <h2>Registro de Asistencia</h2>
 <div class="container">
     <table>
@@ -33,7 +41,7 @@ $result = $conn->query($sql);
         if ($result) {
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>
-                        <td>" . $row['id_asistencia'] . "</td>
+                        <td>" . $row['asistencia'] . "</td>
                         <td>" . $row['fecha'] . "</td>
                         <td>" . $row['hora'] . "</td>
                       </tr>";
@@ -45,9 +53,11 @@ $result = $conn->query($sql);
         </tbody> <!-- Cerrar tbody -->
     </table>
 </div>
+    <form action="../python/word.py" method="post">
+        <button type="submit" style="display: block; margin: 20px;">word</button>
+    </form>
 </body>
 </html>
 <?php
-// Cerrar la conexión
-$conn->close();
+// Cerrar la conexión$conn->close();
 ?>
