@@ -31,7 +31,7 @@
         $(document).ready(function() {
             $('#generate').click(function(event) {
                 event.preventDefault(); // Evita que el formulario recargue la página
-                const text = 'https://www.google.com'; // URL fija para generar el código QR
+                const text = ''; // URL fija para generar el código QR
                 $('#qrcode').empty(); // Limpiar código QR previo
                 $('#qrcode').qrcode({
                     text: text
