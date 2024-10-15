@@ -53,9 +53,6 @@ $result = $conn->query($sql);
         </tbody> <!-- Cerrar tbody -->
     </table>
 </div>
-    <form action="../python/word.py" method="post">
-        <button type="submit" style="display: block; margin: 20px;">word</button>
-    </form>
 </body>
 </html>
 <?php
