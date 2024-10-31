@@ -25,7 +25,6 @@ $result = $conn->query($sql);
     <div class="opciones">
         <a href="../ExpDatos/expoWordBasico.php">Exportar a Word</a>
         <a href="../ExpDatos/expoExcelBasico.php">Exportar a Excel</a>
-        <!-- Ícono de casita para volver a la página de inicio -->
         <a href="../src/menuOpciones.html" title="Ir a Inicio" style="margin-left: 15px; font-size: 20px;">
             <i class="fas fa-home"></i>
         </a>
