@@ -37,10 +37,9 @@ p {
     text-align: justify;
    
 }
-.btn{
-    margin-top: 440px;
-    margin-left: 1285px;
-   
+.btn-1{
+    margin-top: 400px;
+    margin-left: 1150px;
 }
 .boton{
     padding: 25px 25px;
@@ -65,8 +64,4 @@ button{
     font-size: 18px;
     background-color: #5184DC;
     border: none;
-}
-.btn-1{
-    margin-top: -70px;
-    margin-left: 1000px;
 }
