@@ -12,18 +12,20 @@
             <img src="../img/logo.png" alt="Logo"> 
         </div>
         <div class="opciones">
-           <a href="generarCodigoQR.html">generar codigo QR</a>
-           <a href="">cerrar sesion</a>
+            <a href="generar_codigoQR.html">generar codigo QR</a>
+            <a href="../php/cerrarSesion.php">cerrar sesion</a>
         </div>
     </header>
-<div class="container">
-    <h1>conteo de asistensia</h1>
-    <p></p>
-</div>
-<form action="../php/informeBasico.php" method="post">
-    <div class="btn">
-        <button>generar de informes</button>
+    <div class="container">
+        <h1>conteo de asistensia</h1>
+        <p> Bienvenido/a al conteo de asistencia. Aquí podrá gestionar su trabajo de manera más sencilla y eficiente.
+            Nuestro objetivo es facilitarle esta tarea, y esperamos que el esfuerzo que hemos invertido en este sistema
+            le sea de gran utilidad.</p>
     </div>
-</form>
+    <form action="../php/informeBasicoSuma.php" method="post">
+        <div class="btn-1">
+            <button type="submit">generar informe suma</button>
+        </div>
+    </form>
 </body>
 </html>
