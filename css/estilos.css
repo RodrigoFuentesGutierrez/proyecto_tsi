@@ -20,7 +20,7 @@ header {
 }
 
 .logo img {
-    height: 50px; /* Ajusta la altura del logo */
+    height: 70px; /* Ajusta la altura del logo */
 }
 
 .container {
@@ -28,6 +28,7 @@ header {
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    
 }
 
 .contenido {
@@ -38,13 +39,14 @@ header {
     padding: 40px; 
     background-color: #fff;
     border-radius: 12px;
+    width: 430px;
 }
-
 h1 {
     color: #333;
     font-size: 24px; 
     margin: 0; 
     margin-bottom: 20px; 
+    font-family: "Times New Roman", Times, serif;
 }
 
 .button-container {
@@ -73,4 +75,90 @@ button {
     justify-content: center; 
     align-items: center; 
     border: solid 10px block;
+}
+
+.opciones a {
+    font-size: 18px; 
+    color: white; 
+    margin: 10px;
+    text-decoration: none;
+}
+.opciones {
+    margin-left: auto; 
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+header{
+	width: 100%;
+}
+
+.navegacion{
+    position: relative;
+	left: -120px;
+    top: -10px;
+    color: white;
+   
+    
+}
+
+.navegacion ul{
+	list-style: none;
+}
+
+.menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.menu > li > a{
+	display: block;
+	padding: 5px 10px;
+	color: white;
+	font-family: 'Open sans';
+	text-decoration: none;
+    padding-left: 0;
+    font-size: 20px;
+}
+
+
+
+/* Submenu*/
+
+.submenu{
+	position: absolute;
+    background-color: #007bff;
+	width: 120%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+    border: none; 
+    border-radius: 12px; 
+
+}
+
+.submenu li a{
+	display: block;
+	padding: 0px;
+	color: #fff;
+	font-family: 'Open sans';
+	text-decoration: none;
+    padding-left: 0;
+
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
+
+.submenu li a:hover {
+    color: #FFC107; 
+    transition: color 0.3s ease;
 }

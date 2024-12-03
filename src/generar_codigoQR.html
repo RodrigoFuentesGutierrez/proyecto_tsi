@@ -6,6 +6,7 @@
     <title>Generador de Código QR</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
@@ -13,32 +14,88 @@
         <div class="logo">
             <img src="../img/logo.png" alt="Logo"> 
         </div>
+        <div class="opciones">
+            <a href="menuOpciones.html" title="Ir a Inicio" style="margin-left: 40px; font-size: 25px; position: relative; top:30px;">
+                <i class="fas fa-home"></i>
+            </a>
+            <nav class="navegacion">
+                <ul class="menu">
+                    <li><a href="#">generarQR</a>
+                        <ul class="submenu">
+                         <li><a href="../salas/codigoQR_sala1.html">codigoQR_Sala1</a></li>
+                         <li><a href="../salas/codigoQR_sala2.html">codigoQR_Sala2</a></li>
+                         <li><a href="../salas/codigoQR_sala3.html">codigoQR_Sala3</a></li>
+                         <li><a href="../salas/codigoQR_sala4.html">codigoQR_Sala4</a></li>
+                         <li><a href="../salas/codigoQR_sala5.html">codigoQR_Sala5</a></li>
+                         <li><a href="../salas/codigoQR_sala6.html">codigoQR_Sala6</a></li>
+                         <li><a href="../salas/codigoQR_sala7.html">codigoQR_Sala7</a></li>
+                         <li><a href="../salas/codigoQR_sala8.html">codigoQR_Sala8</a></li>
+                         <li><a href="../salas/codigoQR_sala9.html">codigoQR_Sala9</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
     <div class="container">
         <div class="contenido">
-            <h1>Generador de Código QR</h1>
+            <h1>Generador de Código QR sala abiertas</h1>
             <div class="qr">
                 <div id="qrcode"></div>
             </div>
             <div class="button-container">
-                <button id="generate" type="submit">Generar Código QR</button> 
+                <button id="generate" type="button">Generar Código QR</button>
+                <button id="print" type="button">Imprimir Código QR</button>
             </div>
         </div>
     </div>
 
     <script>
         $(document).ready(function() {
-            $('#generate').click(function(event) {
-                event.preventDefault(); // Evita que el formulario recargue la página
-                const text = ''; // URL fija para generar el código QR
+            $('#generate').click(function() {
+                const text = 'http://192.168.18.168/proyecto_tsi-main/php/mensaje.php'; // URL fija para generar el código QR
                 $('#qrcode').empty(); // Limpiar código QR previo
                 $('#qrcode').qrcode({
                     text: text
                 });
             });
+
+            $('#print').click(function() {
+                // Obtiene el canvas generado por jquery.qrcode
+                const canvas = $('#qrcode canvas')[0];
+                if (!canvas) {
+                    alert('Por favor, genere el código QR antes de imprimir.');
+                    return;
+                }
+
+                // Convierte el canvas en una imagen base64
+                const imgData = canvas.toDataURL();
+
+                // Abre una nueva ventana para imprimir
+                const printWindow = window.open('', '_blank', 'width=400,height=400');
+                printWindow.document.write(`
+                    <html>
+                        <head>
+                            <title>Imprimir Código QR</title>
+                        </head>
+                        <body style="text-align: center;">
+                            <!-- Se añadió margin-top para mover la imagen hacia abajo -->
+                            <img src="${imgData}" alt="Código QR" style="margin-top: 50px;" />
+                        </body>
+                    </html>
+                `);
+                printWindow.document.close();
+
+                // Aseguramos que la ventana de impresión esté lista antes de imprimir
+                printWindow.onload = function() {
+                    setTimeout(function() {
+                        printWindow.focus();
+                        printWindow.print();
+                        printWindow.close();
+                    }, 500); // Esperar un pequeño retraso para garantizar que la imagen se cargue
+                };
+            });
         });
     </script>
 </body>
 </html>
-

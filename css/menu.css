@@ -11,7 +11,7 @@ header {
 }
 
 .logo img {
-    height: 50px; 
+    height: 70px; 
 }
 .opciones a {
     font-size: 18px; 
@@ -20,23 +20,23 @@ header {
     text-decoration: none;
 }
 .opciones {
+    margin-left: auto;
+
+    
+}
+.opciones1 a {
+    font-size: 18px; 
+    color: #6A5ACD; 
+    margin: 10px;
+    text-decoration: none;
+}
+.opciones1 {
     margin-left: auto; 
 }
 .container{
     margin-left: 70px;
 }
-h1 {
-    font-size: 30px; 
-    color: #333;
-}
 
-p {
-    font-size: 22px; 
-    color: #666;
-    margin-left: -40px;
-    text-align: justify;
-   
-}
 .btn-1{
     margin-top: 400px;
     margin-left: 1150px;
@@ -65,3 +65,88 @@ button{
     background-color: #5184DC;
     border: none;
 }
+
+
+#h2{
+    position: relative;
+    top: -30px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.accordion-button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+    padding: 15px 15px; /* Reducir el padding para una altura más pequeña */
+    font-size: 14px; /* Opcional: ajustar el tamaño de la fuente para hacerlo más compacto */
+  }
+  /* Color al pasar el mouse por encima */
+  .accordion-button:hover {
+    background-color: #0056b3; /* Fondo al pasar el mouse */
+  }
+
+  /* Estilo de los botones cuando están colapsados */
+  .accordion-button:not(.collapsed) {
+    background-color: #0056b3; /* Fondo cuando está expandido */
+    color: white; /* Texto blanco cuando está expandido */
+  }
+
+  /* Estilo del cuerpo del acordeón */
+  .accordion-body {
+    background-color: #f0f8ff; /* Color de fondo del contenido */
+    color: #333; /* Color del texto */
+    padding: 15px; /* Reducir el padding dentro del cuerpo para una altura más pequeña */
+    border-top: 2px solid #ddd; /* Borde superior */
+    font-size: 18px; /* Opcional: Ajustar el tamaño de la fuente para hacerlo más compacto */
+    height: 450px;
+  }
+
+  /* Si prefieres un ancho más flexible */
+  .accordion-item {
+    max-width: 800px; /* Ancho máximo del acordeón */
+    width: 100%; /* Ancho flexible dentro del contenedor */
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .accordion-collapse {
+    transition: max-height 0.4s ease; /* Suaviza la transición de altura */
+    max-height: 0; /* Por defecto, altura 0 cuando está colapsado */
+    overflow: hidden; /* Oculta el contenido fuera del área visible */
+  }
+
+  /* Cuando el acordeón está expandido */
+  .accordion-collapse.show {
+    max-height: 220px; /* Ajusta el tamaño máximo deseado */
+  }
+
+  /* Ajustar el contenedor del acordeón */
+  .accordion {
+    width: 80%; /* Ajusta el ancho del contenedor */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -40px; /* Mover el acordeón hacia arriba */
+  }
+  h1 {
+    text-align: center;
+    margin-top: 20px; /* Reducir el margen superior para que el título esté más cerca del top */
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 5px; /* Reducir el margen superior de los párrafos */
+    font-size: 22px;
+    margin-left: -10px;
+  }
+  .p{
+    text-align: center;
+    margin-top: -5px; /* Reducir el margen superior de los párrafos */
+    font-size: 22px;
+    margin-left: -10px;
+  }
+

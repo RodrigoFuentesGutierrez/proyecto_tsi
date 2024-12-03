@@ -15,32 +15,67 @@
             <img src="../img/logo.png" alt="Logo"> 
         </div>
         <div class="opciones">
-            <a href="menuOpciones.html" title="Ir a Inicio" style="margin-left: 15px; font-size: 20px;">
+            <a href="../src/menuOpciones.html" title="Ir a Inicio" style="margin-left: 40px; font-size: 25px; position: relative; top:0px;">
                 <i class="fas fa-home"></i>
             </a>
-        </div>
     </header>
     <div class="container">
         <div class="contenido">
-            <h1>Generador de Código QR</h1>
+            <h1>Generador de Código QR sala 3</h1>
             <div class="qr">
                 <div id="qrcode"></div>
             </div>
             <div class="button-container">
-                <button id="generate" type="submit">Generar Código QR</button> 
+                <button id="generate" type="button">Generar Código QR</button>
+                <button id="print" type="button">Imprimir Código QR</button>
             </div>
         </div>
     </div>
 
-    <script>-
+    <script>
         $(document).ready(function() {
-            $('#generate').click(function(event) {
-                //event.preventDefault(); // Evita que el formulario recargue la página
-                const text = 'http://10.33.98.170/proyecto_tsi-main/php/mensaje.php'; // URL fija para generar el código QR
+            $('#generate').click(function() {
+                const text = 'https://feriasoftwareconcepcion.cl/TSI/grupo6/proyecto_tsi-main/salas/mensaje_Sala3.php'; // URL fija para generar el código QR
                 $('#qrcode').empty(); // Limpiar código QR previo
                 $('#qrcode').qrcode({
                     text: text
                 });
+            });
+
+            $('#print').click(function() {
+                // Obtiene el canvas generado por jquery.qrcode
+                const canvas = $('#qrcode canvas')[0];
+                if (!canvas) {
+                    alert('Por favor, genere el código QR antes de imprimir.');
+                    return;
+                }
+
+                // Convierte el canvas en una imagen base64
+                const imgData = canvas.toDataURL();
+
+                // Abre una nueva ventana para imprimir
+                const printWindow = window.open('', '_blank', 'width=400,height=400');
+                printWindow.document.write(`
+                    <html>
+                        <head>
+                            <title>Imprimir Código QR</title>
+                        </head>
+                        <body style="text-align: center;">
+                            <!-- Se añadió margin-top para mover la imagen hacia abajo -->
+                            <img src="${imgData}" alt="Código QR" style="margin-top: 50px;" />
+                        </body>
+                    </html>
+                `);
+                printWindow.document.close();
+
+                // Aseguramos que la ventana de impresión esté lista antes de imprimir
+                printWindow.onload = function() {
+                    setTimeout(function() {
+                        printWindow.focus();
+                        printWindow.print();
+                        printWindow.close();
+                    }, 500); // Esperar un pequeño retraso para garantizar que la imagen se cargue
+                };
             });
         });
     </script>

@@ -1,0 +1,87 @@
+header {
+    position: relative;
+    display: flex;
+    align-items: center; 
+    height: 70px; 
+    background-color: #5184DC; 
+    top: -60px;
+    width: 1538px;
+    left: -60px;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    position: relative;
+    height: 70px;
+}
+
+body {
+    padding: 50px;
+    max-height: 160ch;
+    background-color: #303399;
+}
+
+.container {
+    border:solid 5px rgb(255, 255, 255);
+    width: 650px;
+    height: 500px;
+    margin-top: 30px;
+    margin-left: 30px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    line-height: 200%;
+}
+
+h2 {
+    font-family: sans-serif;
+    text-align: center;
+    margin-left: -10px;  
+    -webkit-text-fill-color: rgb(255, 255, 255);
+}
+
+p {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-left:5px;
+    margin-top: 40px;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+}
+
+.container2 {
+    background-color: white;
+    width: 540px;
+    height: 510px;
+    margin-left: 750px;
+    margin-top: -527px;
+}
+
+h3 {
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.icono {
+    display:flex;
+}
+
+.icono img {
+    height: 350px;
+    margin-left: 860px;
+    margin-top: -450px;
+}
+
+button {
+    background-color: #5184DC;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border-color: white;
+    -webkit-text-fill-color: white;
+    width: 150px;
+    height: 50px;
+    margin-top: 360px;
+    margin-left: 200px
+}

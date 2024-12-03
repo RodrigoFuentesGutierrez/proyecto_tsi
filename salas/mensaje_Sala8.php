@@ -1,22 +1,22 @@
 <?php
 // Incluir el archivo de conexión
-include 'conexionBD.php';
+include '../php/conexionBD.php';
+
+// Cambiar el idioma a español para la conexión
+$conn->query("SET lc_time_names = 'es_ES'");
 
 // Definir el valor de asistencia que se quiere insertar
 $asistencia = 1; // Puedes cambiar este valor según la lógica de tu aplicación
-
-if (!is_null($asistencia) && $asistencia !== '') {
-    // Consulta para insertar los datos
-    $sql = "INSERT INTO asistencia (asistencia, fecha, hora) VALUES ($asistencia, CURDATE(), CURTIME())";
+$sala=8;
+// Consulta para insertar los datos con el mes en español
+$sql = "INSERT INTO salas (asistencia, fecha, hora, mes, sala) 
+        VALUES ($asistencia, CURDATE(), CURTIME(), DATE_FORMAT(NOW(), '%M'),$sala)";
     
-    // Ejecutar la consulta y comprobar si se realizó correctamente
-    if ($conn->query($sql) === TRUE) {
-        $registro_completado = true; // Indica que el registro se completó
-    } else {
-        echo "Error al insertar: " . $conn->error; // Mostrar error si hay un problema
-    }
+// Ejecutar la consulta y comprobar si se realizó correctamente
+if ($conn->query($sql) === TRUE) {
+    $registro_completado = true; // Indica que el registro se completó
 } else {
-    echo "El valor de asistencia no puede ser nulo.";
+    echo "Error al insertar: " . $conn->error; // Mostrar error si hay un problema
 }
 ?>
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ if (!is_null($asistencia) && $asistencia !== '') {
     </header>
 
     <dialog open id="mensaje">
-        <h1>Registro de asistencia completado</h1>
+        <h1>Registro de asistencia completado para la sala 8</h1>
         <p>- Puede cerrar este apartado </p>
     </dialog>
 </body>
@@ -44,3 +44,4 @@ if (!is_null($asistencia) && $asistencia !== '') {
 // Cerrar la conexión
 $conn->close();
 ?>
+

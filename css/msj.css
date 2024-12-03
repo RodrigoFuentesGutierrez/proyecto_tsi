@@ -1,7 +1,11 @@
 header {
+    position: relative;
     display: flex;
     height: 70px;
     background-color: #5184DC;
+    width: 1530px;
+    top: -57px;
+    left: -55px;
 }
 
 .logo {

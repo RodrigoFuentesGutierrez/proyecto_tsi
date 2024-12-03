@@ -1,0 +1,164 @@
+#horai {
+    position: relative;
+    width: 130px;
+    top: 28px;
+    left: 5px;
+    height: 35px;
+    border-radius: 5px; 
+}
+
+#horat {
+    position: relative;
+    width: 130px;
+    top: 28px;
+    left: 15px;
+    height: 35px;
+    border-radius: 5px;  
+}
+
+#btn{
+    position: relative;
+    left: 320px;
+    top: -25px;
+    width: 130px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+header {
+    position: relative;
+    display: flex;
+    align-items: center; 
+    height: 70px; 
+    background-color: #5184DC; 
+    width: 1536px;
+
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    margin-top: 20px;
+    height: 70px; 
+} 
+ /* Estilo general de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F0F4FF;
+}
+
+.accordion-button {
+    background-color: #007bff; /* Color de fondo azul para los botones */
+    color: white; /* Texto blanco */
+    border-color: #007bff; /* Borde azul */
+    width: 100%;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #0056b3; /* Color de fondo cuando el acordeón está expandido */
+    border-color: #0056b3; /* Borde más oscuro */
+
+}
+
+.accordion-body {
+    background-color: #f0f8ff; /* Color de fondo para el contenido del acordeón */
+    width: 100%;
+    height: 220px;
+    font-size: 18px;
+}
+
+/* Opcional: Modificar el borde del acordeón */
+.accordion-item {
+    border: 1px solid #007bff; /* Borde azul */
+    margin-bottom: 5px; /* Separación entre items */
+    width: 60%;
+    position: relative;
+    left: 260px;
+    
+}
+
+
+/* Opcional: Estilo para el encabezado */
+.accordion-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.accordion-header .accordion-button {
+    color: white;
+}
+
+.accordion {
+    margin-left: 50px auto; /* Centra el acordeón horizontalmente */  
+}
+.fechai {
+    position: relative;
+    width: 150px;
+    top: 45px;
+    left: 60px;
+    height: 35px;
+    border-radius: 5px;   
+}
+
+.fechat {
+    position: relative;
+    width: 150px;
+    top: 45px;
+    left: 85px;
+    height: 35px;
+    border-radius: 5px;   
+}
+.btn1 {
+    position: relative;
+    left: 420px;
+    top: -7px;
+
+}
+
+#fechai{
+    position: relative;
+    top: -23px;
+    left: 295px;
+    width: 130px;
+    border-radius: 5px;
+    height: 35px;
+
+}
+
+#fechat{
+    position: relative;
+    top: -23px;
+    width: 130px;
+    left: 305px;
+    border-radius: 5px;
+    height: 35px;
+}
+
+#btn3{
+    position: relative;
+    top: -28px;
+    left: 500px;
+}
+#mes{
+    position: relative;
+    width: 150px;
+    top: 63px;
+    left: 45px;
+}
+
+#anio{
+    position: relative;
+    width: 220px;
+    left: 235px;
+    top: 10px;
+}
+
+input::placeholder {
+    text-align: center;
+}
+
+h2 {
+    font-family: "Times New Roman", Times, serif;
+}

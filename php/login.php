@@ -6,7 +6,7 @@ include("conexionBD.php");
 $correo = $_POST['correo'];
 $password = $_POST['password'];
 
-$sql_check = "SELECT * FROM usuario WHERE correo ='$correo' AND contraseña='$password'";
+$sql_check = "SELECT * FROM usuario WHERE correo ='$correo' AND contrasena='$password'";
 $result_check = $conn->query($sql_check);
 
 // Validar el formato del correo electrónico
@@ -24,7 +24,9 @@ if ($result_check->num_rows > 0) {
         echo "<script>window.location.href='../src/menuOpciones.html';</script>";
         exit;
 } else {
-        echo "<script>alert('Correo electrónico o contraseña incorrectos. Por favor, inténtalo de nuevo.');</script>";
+        echo "<script>alert('Error intentalo nuevamente..');</script>";
         echo "<script>window.location.href='../src/login.html';</script>";
         exit;
 }
+
+

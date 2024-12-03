@@ -7,8 +7,9 @@ td {
     border: 2px solid white;
     padding: 8px;
     text-align: left;
-    color: black;
+    color: white;
     width: 33.33%; /* Ancho fijo para que todos sean del mismo tamaño */ 
+    background-color: #3A4B90;
 }
 th {
     background-color:#1E90FF ;
@@ -18,12 +19,28 @@ th {
 h2 {
     text-align: center;
 }
+
 td, th {
     text-align: center; /* Centra el contenido de las celdas */
 }
+
 .container {
     margin: 0; 
     text-align: center;
+}
+
+.container1{
+   position: relative;
+   left: 650px;
+}
+
+#sala{
+padding: 10px;
+}
+
+.btn{
+padding: 10px;
+background-color: #2D80A9;
 }
 .opciones a {
     font-size: 18px; 
@@ -32,8 +49,19 @@ td, th {
     text-decoration: none;
 }
 .opciones {
-    margin-left: auto; 
+    position: relative;
+    left: 720px;
 }
+.opciones1 a {
+    font-size: 18px; 
+    color: white; 
+    margin: 10px;
+    text-decoration: none;
+    }
+    .opciones1 {
+        position: relative;
+        left: 750px;
+    }
 body {
     background-color: #DFE0FF;
     font-family: 'Arial', sans-serif; 
@@ -41,6 +69,8 @@ body {
     margin: 0; 
     display: flex;
     flex-direction: column; /* Cambia a columna para que header y container estén uno debajo del otro */
+    width: 100%;
+    overflow-x: hidden;
 }
 
 header {
@@ -58,3 +88,4 @@ header {
 .logo img {
     height: 50px; /* Ajusta la altura del logo */
 }
+

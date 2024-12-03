@@ -1,15 +1,19 @@
 <?php
-$host="localhost";
-$usuario="root";
-$password="";
-$bd="conteoasistencia";
+// Detalles de conexión
+$hostname = "localhost";
+$database = "conteoasistencia";
+$username = "root";
+$password = "";
 
-$conn=new mysqli($host,$usuario,$password,$bd);
+// Crear la conexión
+$conn = new mysqli($hostname, $username, $password, $database);
 
-if ($conn->connect_error){
-    die("conexion errornea a la base de datos". $conn->connect_error);
-} else {
-    echo "Conexion exitosa a la base de datos";
-}
-$conn->close();
-?>
+// Verificar la conexión
+//if ($conn->connect_error) {
+    //die("Error al conectar con la base de datos: " . $conn->connect_error);
+//} else {
+    //echo "Conexión exitosa a la base de datos.";
+//}
+
+// Cerrar la conexión (si es necesario en algún punto)
+// $conn->close()
